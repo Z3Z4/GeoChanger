@@ -1,0 +1,20 @@
+# Gradle
+.gradle/
+build/
+
+# Локальные пути к SDK (у каждого своя машина)
+local.properties
+
+# IDE
+.idea/
+*.iml
+captures/
+
+# Android
+*.apk
+*.aab
+app/build/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
