@@ -2,6 +2,12 @@
 .gradle/
 build/
 
+# Ключ подписи — НИКОГДА не попадает в git
+keystore/
+keystore.properties
+*.jks
+*.keystore
+
 # Локальные пути к SDK (у каждого своя машина)
 local.properties
 

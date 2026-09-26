@@ -2,6 +2,8 @@
 
 Простое Android-приложение для подмены геопозиции: выбираешь точку на карте (или через поиск города) — телефон начинает сообщать её как своё местоположение всем приложениям.
 
+[Политика конфиденциальности](https://z3z4.github.io/GeoChanger/)
+
 ## Что внутри
 
 - **Kotlin + Jetpack Compose** — интерфейс
@@ -19,7 +21,15 @@ gradlew.bat assembleDebug
 
 Готовый APK: `app\build\outputs\apk\debug\app-debug.apk`
 
-Release-версия: `gradlew.bat assembleRelease` (подписана debug-ключом, для личного использования достаточно).
+Release-версия для Google Play (Android App Bundle):
+
+```
+gradlew.bat bundleRelease
+```
+
+Готовый AAB: `app\build\outputs\bundle\release\app-release.aab`
+
+Подпись релиза берётся из `keystore.properties` + `keystore/geochanger-release.jks` (в git не попадают, у каждого свой ключ). Без этих файлов release соберётся неподписанным.
 
 В `local.properties` путь к SDK: `F:\AndroidStudioSDK`, JDK — `F:\AndroidStudioo\jbr`. Проект также можно просто открыть в Android Studio (папка `F:\AndroidStudioo`).
 
